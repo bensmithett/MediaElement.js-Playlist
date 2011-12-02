@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>MediaElement.js Playlist Demo</title>
+
+  <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+</head>
+
+<body>
+  <div id="container">
+    <div role="main">
+      
+      <h1>Player 1</h1>
+      <div class="audio-player" id="player1">
+        <a href="#">Play</a>
+        <div class="audio-player-track">
+          <div class="audio-player-pos"></div>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <a href="sound1.mp3" class="sound" data-playin="player1">Play</a>
+        </li>
+        <li>
+          <a href="sound2.mp3" class="sound" data-playin="player1">Play</a>
+        </li>
+        <li>
+          <a href="sound3.mp3" class="sound" data-playin="player1">Play</a>
+        </li>
+      </ul>
+
+      <h1>Player 2</h1>
+      <div class="audio-player" id="player2">
+        <a href="#">Play</a>
+        <div class="audio-player-track">
+          <div class="audio-player-pos"></div>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <a href="sound4.mp3" class="sound" data-playin="player2">Play</a>
+        </li>
+        <li>
+          <a href="sound5.mp3" class="sound" data-playin="player2">Play</a>
+        </li>
+        <li>
+          <a href="sound6.mp3" class="sound" data-playin="player2">Play</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/lib/jquery-1.7.0.min.js"><\/script>')</script>
+  <script src="/lib/mediaelement.min.js"></script>
+  <script src="/mediaelement_playlist.js"></script>
+
+  <script>
+    mediaElementPlaylist({
+        soundSelector: ".sound", 
+        audioElemID: "playlistAudioElement",
+        usePlayer: true,
+        playerButtonSelector: ".audio-player a"
+    });
+  </script>
+</body>
+</html>
+  
