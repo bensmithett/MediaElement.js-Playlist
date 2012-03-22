@@ -30,7 +30,7 @@ var mediaElementPlaylist;
 
         mediaElement = new MediaElement(settings.audioElemID, {
             enablePluginDebug: true,
-            pluginPath: "/swf/mediaelement/",
+            pluginPath: "/plugins/",
             success: function (mediaElement, audioElem) {
                 handleClicks(mediaElement, settings);
 
